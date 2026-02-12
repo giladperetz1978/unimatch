@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="45" fill="#3b82f6"/>
+  <text x="50" y="38" text-anchor="middle" fill="white" font-size="24" font-weight="bold" font-family="Arial">Uni</text>
+  <text x="50" y="62" text-anchor="middle" fill="#bbf7d0" font-size="20" font-weight="bold" font-family="Arial">Match</text>
+</svg>

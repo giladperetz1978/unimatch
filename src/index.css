@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Heebo', Arial, sans-serif;
+  direction: rtl;
+  background-color: #f8fafc;
+  color: #1e293b;
+  min-height: 100vh;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Swipe card animations */
+@keyframes swipeRight {
+  to {
+    transform: translateX(150%) rotate(30deg);
+    opacity: 0;
+  }
+}
+@keyframes swipeLeft {
+  to {
+    transform: translateX(-150%) rotate(-30deg);
+    opacity: 0;
+  }
+}
+.animate-swipe-right {
+  animation: swipeRight 0.4s ease-out forwards;
+}
+.animate-swipe-left {
+  animation: swipeLeft 0.4s ease-out forwards;
+}

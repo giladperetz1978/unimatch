@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/layout.tsx","./src/context/profilecontext.tsx","./src/data/universities.ts","./src/lib/utils.ts","./src/pages/homepage.tsx","./src/pages/likedpage.tsx","./src/pages/matchespage.tsx","./src/pages/profilewizard.tsx","./src/types/index.ts","./src/utils/matching.ts"],"version":"5.9.3"}
