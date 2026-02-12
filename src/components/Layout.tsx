@@ -24,7 +24,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <GraduationCap className="w-7 h-7 text-primary-600" />
             <h1 className="text-xl font-bold text-primary-700">UniMatch</h1>
           </div>
-          <span className="text-xs text-gray-400">מצא את המוסד המושלם</span>
+          <span className="text-xs text-gray-400">מצא/י את המוסד המושלם</span>
         </div>
       </header>
 

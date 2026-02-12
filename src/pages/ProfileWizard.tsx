@@ -67,14 +67,14 @@ export default function ProfileWizard() {
               className="flex-1 py-3 rounded-xl border-2 border-gray-200 text-gray-600 font-medium hover:border-gray-300 hover:bg-gray-50 transition-colors flex items-center justify-center gap-1"
             >
               <ChevronRight className="w-4 h-4" />
-              <span>הקודם</span>
+              <span>הקודם/ת</span>
             </button>
           )}
           <button
             onClick={nextStep}
             className="flex-1 py-3 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-bold transition-colors flex items-center justify-center gap-1 shadow-md"
           >
-            <span>{step === STEPS.length - 1 ? 'צפה בהתאמות' : 'הבא'}</span>
+            <span>{step === STEPS.length - 1 ? 'צפה/י בהתאמות' : 'הבא/ה'}</span>
             {step === STEPS.length - 1 ? (
               <Check className="w-4 h-4" />
             ) : (
@@ -89,7 +89,7 @@ export default function ProfileWizard() {
   function StepPersonal() {
     return (
       <div className="flex flex-col gap-4">
-        <h2 className="text-lg font-bold text-gray-900">ספר לנו על עצמך</h2>
+        <h2 className="text-lg font-bold text-gray-900">ספר/י לנו על עצמך</h2>
         <div className="grid grid-cols-2 gap-3">
           <InputField
             label="שם פרטי"
@@ -101,7 +101,7 @@ export default function ProfileWizard() {
             label="שם משפחה"
             value={profile.lastName}
             onChange={v => updateProfile({ lastName: v })}
-            placeholder="ישראלי"
+            placeholder="ישראלי/ת"
           />
         </div>
         <InputField
@@ -127,8 +127,8 @@ export default function ProfileWizard() {
   function StepLocation() {
     return (
       <div className="flex flex-col gap-4">
-        <h2 className="text-lg font-bold text-gray-900">איפה אתה גר?</h2>
-        <p className="text-sm text-gray-500">בחר את האזור הקרוב למקום מגוריך</p>
+        <h2 className="text-lg font-bold text-gray-900">איפה את/ה גר/ה?</h2>
+        <p className="text-sm text-gray-500">בחר/י את האזור הקרוב למקום מגוריך</p>
         <div className="grid grid-cols-2 gap-3">
           {AREAS.map(area => (
             <button
@@ -178,12 +178,12 @@ export default function ProfileWizard() {
             }
             className="w-full p-3 rounded-xl border-2 border-gray-200 focus:border-primary-500 focus:outline-none bg-white text-gray-700"
           >
-            <option value="">בחר</option>
+            <option value="">בחר/י</option>
             <option value="highschool">תיכון</option>
             <option value="mechina">מכינה</option>
             <option value="first-degree">תואר ראשון (בלימודים)</option>
             <option value="second-degree">תואר שני</option>
-            <option value="other">אחר</option>
+            <option value="other">אחר/ת</option>
           </select>
         </div>
         <div className="flex items-center gap-3">
@@ -195,7 +195,7 @@ export default function ProfileWizard() {
             className="w-5 h-5 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
           />
           <label htmlFor="mechina" className="text-sm font-medium text-gray-700">
-            למדתי/לומד במכינה קדם-אקדמית
+            למדתי/לומד/ת במכינה קדם-אקדמית
           </label>
         </div>
       </div>
@@ -214,8 +214,8 @@ export default function ProfileWizard() {
 
     return (
       <div className="flex flex-col gap-4">
-        <h2 className="text-lg font-bold text-gray-900">מה תרצה ללמוד?</h2>
-        <p className="text-sm text-gray-500">בחר תחום אחד או יותר</p>
+        <h2 className="text-lg font-bold text-gray-900">מה תרצה/י ללמוד?</h2>
+        <p className="text-sm text-gray-500">בחר/י תחום אחד או יותר</p>
         <div className="flex flex-wrap gap-2 max-h-[250px] overflow-y-auto pr-1">
           {FIELDS_OF_STUDY.map(field => (
             <button
@@ -252,7 +252,7 @@ export default function ProfileWizard() {
             {[
               { value: 'morning', label: 'בוקר ☀️' },
               { value: 'evening', label: 'ערב 🌙' },
-              { value: 'flexible', label: 'גמיש 🔄' },
+              { value: 'flexible', label: 'גמיש/ה 🔄' },
             ].map(opt => (
               <button
                 key={opt.value}
@@ -309,7 +309,7 @@ export default function ProfileWizard() {
             {[
               { value: 'frontal', label: 'פרונטלי 🏫' },
               { value: 'online', label: 'אונליין 💻' },
-              { value: 'hybrid', label: 'משולב 🔀' },
+              { value: 'hybrid', label: 'משולב/ת 🔀' },
             ].map(opt => (
               <button
                 key={opt.value}
@@ -347,7 +347,7 @@ export default function ProfileWizard() {
     return (
       <div className="flex flex-col gap-4">
         <h2 className="text-lg font-bold text-gray-900">תחביבים ותחומי עניין</h2>
-        <p className="text-sm text-gray-500">מה אתה אוהב לעשות? (אופציונלי)</p>
+        <p className="text-sm text-gray-500">מה את/ה אוהב/ת לעשות? (אופציונלי)</p>
         <div className="flex flex-wrap gap-2">
           {HOBBIES.map(hobby => (
             <button

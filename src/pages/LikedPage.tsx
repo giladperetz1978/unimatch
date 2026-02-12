@@ -21,14 +21,14 @@ export default function LikedPage() {
               אין מועדפים עדיין
             </h2>
             <p className="text-gray-500">
-              עבור לדף ההתאמות ועשה לייק למוסדות שמעניינים אותך
+              עבור/י לדף ההתאמות ועשה/י לייק למוסדות שמעניינים אותך
             </p>
           </div>
           <button
             onClick={() => navigate('/matches')}
             className="bg-primary-600 hover:bg-primary-700 text-white rounded-xl py-3 px-8 font-bold transition-colors flex items-center gap-2"
           >
-            <span>צפה בהתאמות</span>
+            <span>צפה/י בהתאמות</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>
@@ -85,7 +85,7 @@ export default function LikedPage() {
                   'flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center transition-all',
                   'hover:bg-red-50 text-gray-400 hover:text-red-500'
                 )}
-                title="הסר מהמועדפים"
+                title="הסר/י מהמועדפים"
               >
                 <Trash2 className="w-4 h-4" />
               </button>
@@ -99,7 +99,7 @@ export default function LikedPage() {
             🎓 המוסדות יקבלו את הפניה שלך!
           </h3>
           <p className="text-sm text-accent-700">
-            הפרטים שלך יועברו למוסדות שסימנת כמועדפים, והם ייצרו איתך קשר
+            הפרטים שלך יועברו למוסדות שסימנת כמועדפים/ות, והם ייצרו איתך קשר
             עם מידע נוסף על תוכניות הלימודים.
           </p>
         </div>

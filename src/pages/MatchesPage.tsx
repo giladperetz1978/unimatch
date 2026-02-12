@@ -37,17 +37,17 @@ export default function MatchesPage() {
           <AlertCircle className="w-16 h-16 text-gray-300" />
           <div>
             <h2 className="text-xl font-bold text-gray-900 mb-2">
-              השלם את הפרופיל שלך
+              השלם/י את הפרופיל שלך
             </h2>
             <p className="text-gray-500">
-              כדי לקבל התאמות, צריך קודם למלא את הפרופיל
+              כדי לקבל התאמות, יש קודם למלא את הפרופיל
             </p>
           </div>
           <button
             onClick={() => navigate('/profile')}
             className="bg-primary-600 hover:bg-primary-700 text-white rounded-xl py-3 px-8 font-bold transition-colors"
           >
-            מלא פרופיל
+            מלא/י פרופיל
           </button>
         </div>
       </Layout>
@@ -64,14 +64,14 @@ export default function MatchesPage() {
               לא נמצאו התאמות
             </h2>
             <p className="text-gray-500">
-              נסה לעדכן את הפרופיל שלך או לשנות את תחומי הלימודים
+              נסה/י לעדכן את הפרופיל שלך או לשנות את תחומי הלימודים
             </p>
           </div>
           <button
             onClick={() => navigate('/profile')}
             className="bg-primary-600 hover:bg-primary-700 text-white rounded-xl py-3 px-8 font-bold transition-colors"
           >
-            עדכן פרופיל
+            עדכן/י פרופיל
           </button>
         </div>
       </Layout>
@@ -100,14 +100,14 @@ export default function MatchesPage() {
               onClick={() => setCurrentIndex(0)}
               className="border-2 border-primary-200 text-primary-600 rounded-xl py-3 px-6 font-bold hover:bg-primary-50 transition-colors"
             >
-              צפה שוב
+              צפה/י שוב
             </button>
             {likedUniversities.length > 0 && (
               <button
                 onClick={() => navigate('/liked')}
                 className="bg-primary-600 text-white rounded-xl py-3 px-6 font-bold hover:bg-primary-700 transition-colors"
               >
-                צפה במועדפים
+                צפה/י במועדפים
               </button>
             )}
           </div>
@@ -205,7 +205,7 @@ export default function MatchesPage() {
               onClick={() => setShowDetails(!showDetails)}
               className="flex items-center gap-1 text-sm text-primary-600 font-medium mb-3"
             >
-              {showDetails ? 'הסתר פרטים' : 'הצג פרטים נוספים'}
+              {showDetails ? 'הסתר/י פרטים' : 'הצג/י פרטים נוספים'}
               {showDetails ? (
                 <ChevronUp className="w-4 h-4" />
               ) : (

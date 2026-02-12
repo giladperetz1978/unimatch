@@ -22,10 +22,10 @@ export default function HomePage() {
 
         <div>
           <h1 className="text-3xl font-extrabold text-gray-900 mb-2">
-            ברוכים הבאים ל-UniMatch
+            ברוכים/ות הבאים/ות ל-UniMatch
           </h1>
           <p className="text-gray-500 text-lg leading-relaxed max-w-sm">
-            מצא את המוסד האקדמי המושלם עבורך בכמה צעדים פשוטים
+            מצא/י את המוסד האקדמי המושלם עבורך בכמה צעדים פשוטים
           </p>
         </div>
 
@@ -33,18 +33,18 @@ export default function HomePage() {
         <div className="grid gap-4 w-full max-w-sm">
           <FeatureCard
             icon={<Users className="w-5 h-5 text-primary-600" />}
-            title="מלא פרופיל"
-            description="ספר לנו על עצמך, הציונים והעדפות הלימודים שלך"
+            title="מלא/י פרופיל"
+            description="ספר/י לנו על עצמך, הציונים והעדפות הלימודים שלך"
           />
           <FeatureCard
             icon={<Sparkles className="w-5 h-5 text-accent-600" />}
-            title="קבל התאמות"
+            title="קבל/י התאמות"
             description="אלגוריתם חכם ימצא את המוסדות המתאימים ביותר"
           />
           <FeatureCard
             icon={<Heart className="w-5 h-5 text-red-500" />}
-            title="סמן מועדפים"
-            description="עשה לייק למוסדות שמעניינים אותך וקבל מידע נוסף"
+            title="סמן/י מועדפים"
+            description="עשה/י לייק למוסדות שמעניינים אותך וקבל/י מידע נוסף"
           />
         </div>
 
@@ -53,7 +53,7 @@ export default function HomePage() {
           onClick={() => navigate(isProfileComplete ? '/matches' : '/profile')}
           className="w-full max-w-sm bg-gradient-to-l from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl py-4 px-6 font-bold text-lg shadow-lg shadow-primary-200 transition-all hover:shadow-xl hover:shadow-primary-300 flex items-center justify-center gap-2"
         >
-          <span>{isProfileComplete ? 'צפה בהתאמות' : 'בואו נתחיל!'}</span>
+          <span>{isProfileComplete ? 'צפה/י בהתאמות' : 'בואו נתחיל!'}</span>
           <ArrowLeft className="w-5 h-5" />
         </button>
 
@@ -62,7 +62,7 @@ export default function HomePage() {
             onClick={() => navigate('/profile')}
             className="text-primary-600 hover:text-primary-700 text-sm font-medium underline underline-offset-4"
           >
-            עדכן פרופיל
+            עדכן/י פרופיל
           </button>
         )}
       </div>

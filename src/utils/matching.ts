@@ -37,13 +37,13 @@ function calculateMatchScore(
 
   if (bagrutOk && psychOk) {
     score += 20
-    reasons.push('עומד בדרישות הקבלה')
+    reasons.push('עומד/ת בדרישות הקבלה')
   } else if (bagrutOk || psychOk) {
     score += 10
-    reasons.push('עומד בחלק מדרישות הקבלה')
+    reasons.push('עומד/ת בחלק מדרישות הקבלה')
   } else {
     score -= 10
-    reasons.push('ייתכן שלא עומד בדרישות הקבלה')
+    reasons.push('ייתכן שלא עומד/ת בדרישות הקבלה')
   }
 
   // Mechina
@@ -66,7 +66,7 @@ function calculateMatchScore(
   const studentAreas = areaMap[profile.residenceArea] || []
   if (studentAreas.includes(uni.area)) {
     score += 15
-    reasons.push('קרוב לאזור מגוריך')
+    reasons.push('קרוב/ה לאזור מגוריך')
   }
 
   // Study time match (up to 10 points)

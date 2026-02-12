@@ -336,7 +336,7 @@ export default function SplashScreen({ onFinish }: { onFinish: () => void }) {
                   transition={{ delay: 0.6, duration: 0.8 }}
                   style={{ fontFamily: 'Heebo, sans-serif' }}
                 >
-                  העתיד שלך מתחיל ב-
+                  העתיד שלך מתחיל/ה ב-
                   <span className="text-amber-400 block text-4xl sm:text-5xl mt-2 tracking-wider">
                     UNIMATCH
                   </span>
