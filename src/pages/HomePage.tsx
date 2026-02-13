@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { GraduationCap, ArrowLeft, Sparkles, Users, Heart } from 'lucide-react'
+import { ArrowLeft, Sparkles, Users, Heart } from 'lucide-react'
 import Layout from '../components/Layout'
 import { useProfile } from '../context/ProfileContext'
 
