@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 // Book colors for the bookshelf
@@ -238,31 +238,6 @@ const DeLorean = () => (
 export default function SplashScreen({ onFinish }: { onFinish: () => void }) {
   const [phase, setPhase] = useState<'slogan' | 'bookshelf' | 'delorean' | 'done'>('slogan')
   const [books] = useState(generateBooks)
-  const audioRef = useRef<HTMLAudioElement | null>(null)
-
-  // Play Back to the Future theme
-  useEffect(() => {
-    const audio = new Audio('/bttf-theme.mp3')
-    audio.volume = 0.5
-    audioRef.current = audio
-    const playPromise = audio.play()
-    if (playPromise) {
-      playPromise.catch(() => {
-        // Autoplay blocked - try on first interaction
-        const handleInteraction = () => {
-          audio.play().catch(() => {})
-          document.removeEventListener('click', handleInteraction)
-          document.removeEventListener('touchstart', handleInteraction)
-        }
-        document.addEventListener('click', handleInteraction)
-        document.addEventListener('touchstart', handleInteraction)
-      })
-    }
-    return () => {
-      audio.pause()
-      audio.src = ''
-    }
-  }, [])
 
   useEffect(() => {
     // Phase 1: Show slogan for 2.5 seconds
@@ -286,18 +261,6 @@ export default function SplashScreen({ onFinish }: { onFinish: () => void }) {
     if (phase === 'delorean') {
       // Phase 3: DeLorean flies + curtain pull ~2.8s, then done
       const deloreanTimer = setTimeout(() => {
-        // Fade out music
-        if (audioRef.current) {
-          const audio = audioRef.current
-          const fadeInterval = setInterval(() => {
-            if (audio.volume > 0.05) {
-              audio.volume = Math.max(0, audio.volume - 0.05)
-            } else {
-              clearInterval(fadeInterval)
-              audio.pause()
-            }
-          }, 50)
-        }
         setPhase('done')
         onFinish()
       }, 2800)

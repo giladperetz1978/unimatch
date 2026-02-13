@@ -48,7 +48,7 @@ export interface University {
   id: string
   name: string
   logo: string
-  type: 'university' | 'college' | 'mechina'
+  type: 'university' | 'college' | 'mechina' | 'technician'
   location: string
   area: string
   description: string

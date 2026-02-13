@@ -15,6 +15,7 @@ import { useProfile } from '../context/ProfileContext'
 import { getMatches } from '../utils/matching'
 import { University } from '../types'
 import { cn } from '../lib/utils'
+import { FIELD_SYLLABI } from '../data/universities'
 
 export default function MatchesPage() {
   const navigate = useNavigate()
@@ -79,6 +80,9 @@ export default function MatchesPage() {
   }
 
   const currentMatch = matches[currentIndex]
+  const matchedFields = currentMatch
+    ? profile.desiredField.filter(field => currentMatch.fields.includes(field))
+    : []
 
   if (!currentMatch) {
     return (
@@ -233,10 +237,33 @@ export default function MatchesPage() {
                     ))}
                   </div>
                 </div>
+                {matchedFields.length > 0 && (
+                  <div>
+                    <span className="font-medium text-gray-700">
+                      סילבוס לדוגמה לתחומים שבחרת:
+                    </span>
+                    <div className="mt-2 space-y-2">
+                      {matchedFields.map(field => (
+                        <div key={field} className="rounded-lg bg-gray-50 p-2">
+                          <div className="text-gray-700 font-medium mb-1">{field}</div>
+                          <ul className="list-disc pr-5 text-gray-600 space-y-0.5">
+                            {(FIELD_SYLLABI[field] || ['תכנים משתנים לפי מסלול']).map(item => (
+                              <li key={item}>{item}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
                 <div>
                   <span className="font-medium text-gray-700">סוג מוסד: </span>
                   <span className="text-gray-600">
-                    {currentMatch.type === 'university' ? 'אוניברסיטה' : 'מכללה'}
+                    {currentMatch.type === 'university'
+                      ? 'אוניברסיטה'
+                      : currentMatch.type === 'technician'
+                        ? 'הנדסאים'
+                        : 'מכללה'}
                   </span>
                 </div>
                 <div>
