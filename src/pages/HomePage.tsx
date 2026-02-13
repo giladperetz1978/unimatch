@@ -12,8 +12,12 @@ export default function HomePage() {
       <div className="flex flex-col items-center text-center gap-8 py-8">
         {/* Hero */}
         <div className="relative">
-          <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center shadow-lg shadow-primary-200">
-            <GraduationCap className="w-12 h-12 text-white" />
+          <div className="w-24 h-24 rounded-2xl bg-white flex items-center justify-center shadow-lg shadow-primary-200">
+            <img
+              src="/unimatch-logo.png"
+              alt="UniMatch logo"
+              className="w-20 h-20 object-contain"
+            />
           </div>
           <div className="absolute -bottom-1 -right-1 w-8 h-8 rounded-full bg-accent-500 flex items-center justify-center">
             <Sparkles className="w-4 h-4 text-white" />

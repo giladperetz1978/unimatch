@@ -45,34 +45,6 @@ function generateBooks(): BookData[] {
   return books
 }
 
-const AppIcon = () => (
-  <svg viewBox="0 0 512 512" className="w-28 h-28 drop-shadow-2xl">
-    <defs>
-      <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" style={{ stopColor: '#6366f1' }} />
-        <stop offset="100%" style={{ stopColor: '#8b5cf6' }} />
-      </linearGradient>
-      <linearGradient id="cap" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" style={{ stopColor: '#fbbf24' }} />
-        <stop offset="100%" style={{ stopColor: '#f59e0b' }} />
-      </linearGradient>
-    </defs>
-    <rect width="512" height="512" rx="96" fill="url(#bg)" />
-    <path d="M120 80 L120 320 Q120 432 256 432 Q392 432 392 320 L392 80 L332 80 L332 316 Q332 380 256 380 Q180 380 180 316 L180 80 Z" fill="white" />
-    <polygon points="256,200 336,240 256,280 176,240" fill="url(#cap)" />
-    <rect x="236" y="175" width="40" height="30" rx="4" fill="url(#cap)" />
-    <circle cx="256" cy="175" r="8" fill="#f59e0b" />
-    <path d="M256 175 Q240 185 230 175" stroke="#f59e0b" strokeWidth="3" fill="none" />
-    <path d="M230 175 L220 210" stroke="#f59e0b" strokeWidth="3" fill="none" strokeLinecap="round" />
-    <path d="M216 210 L220 210 L224 210 L222 225 L218 225 Z" fill="#f59e0b" />
-    <line x1="216" y1="225" x2="216" y2="235" stroke="#f59e0b" strokeWidth="2" />
-    <line x1="218" y1="225" x2="218" y2="238" stroke="#f59e0b" strokeWidth="2" />
-    <line x1="220" y1="225" x2="220" y2="236" stroke="#f59e0b" strokeWidth="2" />
-    <line x1="222" y1="225" x2="222" y2="233" stroke="#f59e0b" strokeWidth="2" />
-    <line x1="224" y1="225" x2="224" y2="230" stroke="#f59e0b" strokeWidth="2" />
-  </svg>
-)
-
 /* ── DeLorean time machine with Marty, Doc & Einstein ── */
 const DeLorean = () => (
   <svg viewBox="0 0 420 180" className="w-full h-full" style={{ filter: 'drop-shadow(0 0 20px rgba(0,200,255,0.6))' }}>
@@ -289,7 +261,11 @@ export default function SplashScreen({ onFinish }: { onFinish: () => void }) {
                   animate={{ scale: 1, rotate: 0 }}
                   transition={{ type: 'spring', stiffness: 200, damping: 15, delay: 0.2 }}
                 >
-                  <AppIcon />
+                  <img
+                    src="/unimatch-logo.png"
+                    alt="UniMatch logo"
+                    className="w-28 h-28 drop-shadow-2xl"
+                  />
                 </motion.div>
 
                 <motion.h1
